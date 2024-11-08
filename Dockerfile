@@ -5,7 +5,7 @@ FROM python:3.13-alpine
 WORKDIR /app
 
 # Copy the Python script into the container
-COPY random_ping.py .
+COPY random_ping.py /app/
 
 # Install any required Python libraries
 RUN pip install requests
