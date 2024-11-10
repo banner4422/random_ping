@@ -1,3 +1,4 @@
+[![Docker Image CI](https://github.com/banner4422/random_ping/actions/workflows/docker-image.yml/badge.svg)](https://github.com/banner4422/random_ping/actions/workflows/docker-image.yml)
 # random_ping
 Ping a URL at a random time in the seconds interval you specify.
 
