@@ -6,7 +6,6 @@ import time
 
 import requests
 
-# Set up logging
 logging.basicConfig(level=logging.INFO)
 
 def ping_url(url):
@@ -18,15 +17,13 @@ def ping_url(url):
 
 def run_random_ping(url, interval):
     while True:
-        # Generate a random wait time within the given interval
         wait_time = random.randint(1, interval)
         logging.info(f"Waiting for {wait_time} seconds before the next ping.")
         time.sleep(wait_time)
         ping_url(url)
 
-# Get URL and interval from command-line arguments or environment variables
-url = sys.argv[1] if len(sys.argv) > 1 else os.getenv("PING_URL", "https://example.com")
-interval = int(sys.argv[2]) if len(sys.argv) > 2 else int(os.getenv("PING_INTERVAL", 3600))  # Default to 1 hour
+url = sys.argv[1] if len(sys.argv) > 1 else os.getenv("PING_URL", "http://localhost:3000")
+interval = int(sys.argv[2]) if len(sys.argv) > 2 else int(os.getenv("PING_INTERVAL", 3600))
 
 if __name__ == "__main__":
     logging.info(f"Starting to ping URL: {url} with a max interval of {interval} seconds.")

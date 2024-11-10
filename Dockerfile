@@ -12,7 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY random_ping.py /app/
 
 # Set default environment variable for the URL
-ENV PING_URL=https://example.com
+ENV PING_URL=http://localhost:3000
+ENV PING_INTERVAL=3600
 
 # Run the Python script with the URL from the environment variable
 CMD ["python", "random_ping.py"]

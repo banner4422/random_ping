@@ -1,0 +1,7 @@
+services:
+  random-ping:
+    image: ghcr.io/banner4422/random_ping:master
+    environment:
+      - PING_URL=https://example.com # Set your target URL here
+      - PING_INTERVAL=3600 # Set your interval in seconds here
+    restart: unless-stopped
