@@ -4,11 +4,12 @@ FROM python:3.13-alpine
 # Set the working directory in the container
 WORKDIR /app
 
+# Copy requirements.txt and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
 # Copy the Python script into the container
 COPY random_ping.py /app/
-
-# Install any required Python libraries
-RUN pip install requests
 
 # Set default environment variable for the URL
 ENV PING_URL=https://example.com
