@@ -41,5 +41,4 @@ services:
 ```
 
 ## License
-This project is licensed under the GNU Affero General Public License, Version 3.0. See [LICENSE](LICENSE) for more information.
-```
+This project is licensed under the **GNU Affero General Public License, Version 3.0**. See [LICENSE](LICENSE) for more information.
