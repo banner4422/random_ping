@@ -18,14 +18,9 @@ jobs:
           images: |
             ghcr.io/banner4422/random-ping
           tags: |
-            type=schedule
             type=ref,event=branch
-            type=ref,event=pr
-            type=ref,event=tag
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
             type=sha
+            type=ref,event=branch,pattern=master,latest=true  # Set 'latest' tag for the master branch
           flavor: |
             latest=auto
 
