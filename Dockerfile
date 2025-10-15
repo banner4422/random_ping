@@ -1,5 +1,5 @@
 # Use the official Python image from the Docker Hub
-FROM python:3.13.7-alpine
+FROM python:3.14.0-alpine
 
 # Set the working directory in the container
 WORKDIR /app
